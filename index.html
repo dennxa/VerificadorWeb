@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador Web</title>
+    <style>
+        h2 {
+            text-align: center;
+            font-size: 35px;
+        }
+
+        body{
+            border: #18ab00 10px solid;
+            background-color:#c4c4c4;
+            margin: 0%;
+            
+        }
+
+        img{
+            float: "top";
+        }
+
+        div{
+            text-align: center;
+            margin-top: 27.5px;
+        }
+        </style>
+
+    <script type="text/javascript">
+
+        if (window.addEventListener) {
+            var codigo = "";
+            window.addEventListener("keydown", function (e) {
+                codigo += String.fromCharCode(e.keyCode);
+                if (e.keyCode == 13) {
+                    window.location = "mostrar_producto.php?codigo=" + codigo;
+                    codigo = "";
+                }
+            }, true);
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <img src="img/logo.jpg" alt="Logo" height="120px">
+    </div>
+
+    <div>
+        <h2>Bienvenido! Pase por favor por el </br>
+            sensor el codigo a escanear
+        </h2>
+    </div>
+
+    <div>
+        <img src="img/barras.png" alt="barras" height="150px">
+    </div>
+
+    <div>
+        <img src="img/flechas.png" alt="flechitas" height="80px">
+    </div>
+</body>
+
+</html>
